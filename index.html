@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vérificateur de Formulaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="signup-form" action="confirmation.html" method="post">
+        <div>
+            <label for="firstName">Prénom :</label>
+            <input type="text" id="firstName" name="firstName" required minlength="3">
+            <span class="error" id="firstNameError"></span>
+        </div>
+
+        <div>
+            <label for="lastName">Nom :</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span class="error" id="lastNameError"></span>
+        </div>
+
+        <div>
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" required min="19">
+            <span class="error" id="ageError"></span>
+        </div>
+
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error" id="emailError"></span>
+        </div>
+
+        <div>
+            <label for="confirmEmail">Confirmation Email :</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required>
+            <span class="error" id="confirmEmailError"></span>
+        </div>
+
+        <div>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            <span class="error" id="passwordError"></span>
+        </div>
+
+        <div>
+            <label for="confirmPassword">Confirmation Mot de passe :</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="error" id="confirmPasswordError"></span>
+        </div>
+
+        <div>
+            <input type="checkbox" id="cgu" name="cgu" required>
+            <label for="cgu">Accepter les CGU</label>
+            <span class="error" id="cguError"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
